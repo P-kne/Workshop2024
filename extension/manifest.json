@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "Moderation Community Extension",
+  "version": "1.0",
+  "description": "Extension pour signaler des publications inappropriées sur les réseaux sociaux.",
+  "permissions": ["activeTab", "scripting"],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_icon": {
+      "16": "icon16.png",
+      "48": "icon48.png",
+      "128": "icon128.png"
+    }
+  }
+}
